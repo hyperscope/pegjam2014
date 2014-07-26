@@ -125,7 +125,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -137,7 +137,7 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 10
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -155,7 +155,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 262858473}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 1, z: -9.64253998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -171,15 +171,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e179589d626044489ca74db139d6b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guiDepth: 0
+  guiDepth: 1
   levelToLoad: 
-  splashLogo: {fileID: 2800000, guid: 4c1c0972e475cbb47b9b06e2d59920b3, type: 3}
-  fadeSpeed: .300000012
-  waitTime: .5
+  splashLogo: {fileID: 2800000, guid: 9857dd03ad11e7d44a832789c2b11e13, type: 3}
+  fadeSpeed: .699999988
+  waitTime: 0
   waitForInput: 0
   startAutomatically: 1
   splashType: 0
-  logoPositioning: 0
+  logoPositioning: 1
 --- !u!82 &262858480
 AudioSource:
   m_ObjectHideFlags: 0
@@ -188,7 +188,7 @@ AudioSource:
   m_GameObject: {fileID: 262858473}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: c9862e9fd94c5f349b0aefb04541ec2f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7a29e98476c94564ebf916b1af3e1e08, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
