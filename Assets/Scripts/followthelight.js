@@ -1,30 +1,37 @@
-﻿    var target : Transform;
+﻿ 	var target : Transform;
     var smoothTime = 0.3;
     var xOffset : float = 1.0;
     var zOffset : float = 1.0;
  
     private var thisTransform : Transform;
     private var velocity : Vector2;
+    private var shouldFollow : boolean;
+ 	public var aiWander : AIWander;
  
- 
-    function Start()
+   function Start()
     {
-           thisTransform = transform;
-    }
+       thisTransform = transform;
+   }
  
     function LateUpdate()
     {
- 
+   if (shouldFollow) {
            thisTransform.position.x = Mathf.Lerp( thisTransform.position.x, target.position.x + xOffset, Time.deltaTime * smoothTime);
  
            thisTransform.position.z = Mathf.Lerp( thisTransform.position.z, target.position.z + zOffset, Time.deltaTime * smoothTime);
- 
+   }
+    }
     
-    //function OnTriggerStay (other : Collider){
-	//if (other.gameObject.CompareTag("Black Orbit"))
-		//{
-		//damaging = true;
-		//playerHealth -= 1; //Time.deltaTime;
-		//}
+    function OnTriggerEnter(other : Collider ) {
+     if (other.gameObject.tag == "Player") {
+      shouldFollow = true;
+      aiWander.enabled = false;
+     }
+    }
     
+    function OnTriggerExit(other : Collider) {
+     if (other.gameObject.tag == "Player") {
+      shouldFollow = false;
+     aiWander.enabled = true;
+     }
     }
