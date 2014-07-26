@@ -339,6 +339,7 @@ GameObject:
   - 23: {fileID: 1673099922}
   - 135: {fileID: 1673099921}
   - 114: {fileID: 1673099925}
+  - 114: {fileID: 1673099926}
   m_Layer: 9
   m_Name: Rock
   m_TagString: Rock
@@ -353,7 +354,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1673099920}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: .5
@@ -410,8 +411,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 2
   wayPoint: {x: 0, y: 0, z: 0}
-  Range: 10
-  followthelight: {fileID: 0}
+  Range: 5
+--- !u!114 &1673099926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1673099920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a08295420f05e3246bd3e1f5adb1dd69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 2078522145}
+  smoothTime: .300000012
+  xOffset: 1
+  zOffset: 1
+  aiWander: {fileID: 1673099925}
 --- !u!1 &2033755868
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,8 +577,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f92df10e6f732674cae8be1566d1f80f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 100
-  maxHealth: 100
 --- !u!33 &2078522144
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -621,8 +635,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f9f7981bc32e640aefb2a0a06c8dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 100
-  maxHealth: 100
 --- !u!82 &2078522149
 AudioSource:
   m_ObjectHideFlags: 0

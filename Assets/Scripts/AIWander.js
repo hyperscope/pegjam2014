@@ -1,7 +1,7 @@
 ﻿    var Speed= 20;
     var wayPoint : Vector3;
     var Range= 10;
-    var followthelight : followthelight; //This should be were Script B goes
+    //var followthelight : followthelight; //This should be were Script B goes
      
     function Start(){
     //initialise the target way point
@@ -18,7 +18,7 @@
     // when the distance between us and the target is less than 3
     // create a new way point target
     Wander();
-    followthelight.Test();
+   // followthelight.Test();
      
      
     }
