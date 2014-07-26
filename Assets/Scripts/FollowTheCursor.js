@@ -1,4 +1,4 @@
-﻿var depth = 5.0;
+﻿var depth = 20.0;
  
 function Start ()
 {

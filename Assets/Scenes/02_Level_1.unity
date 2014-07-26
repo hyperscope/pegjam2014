@@ -316,7 +316,6 @@ GameObject:
   - 23: {fileID: 1102480333}
   - 54: {fileID: 1102480332}
   - 114: {fileID: 1102480331}
-  - 114: {fileID: 1102480330}
   - 195: {fileID: 1102480329}
   m_Layer: 0
   m_Name: Sphere
@@ -346,22 +345,6 @@ NavMeshAgent:
   m_BaseOffset: .5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1102480330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 2fe817a084e06e842bb3d27d5db3c4b5,
-    type: 2}
-  m_PrefabInternal: {fileID: 1874276098}
-  m_GameObject: {fileID: 1102480328}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 807cb4b5b2b6c6d47af9d8f3945a8421, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 1
-  wayPoint: {x: 0, y: 0, z: 0}
-  Range: 10
-  followthelight: {fileID: 0}
 --- !u!114 &1102480331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,6 +361,7 @@ MonoBehaviour:
   smoothTime: 5
   xOffset: .00999999978
   zOffset: .00999999978
+  AIWander: {fileID: 0}
 --- !u!54 &1102480332
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -697,7 +681,12 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 397372360}
-    m_RemovedComponents: []
+    - target: {fileID: 11400002, guid: 2fe817a084e06e842bb3d27d5db3c4b5, type: 2}
+      propertyPath: aiWander
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11400000, guid: 2fe817a084e06e842bb3d27d5db3c4b5, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2fe817a084e06e842bb3d27d5db3c4b5, type: 2}
   m_RootGameObject: {fileID: 1102480328}
   m_IsPrefabParent: 0
